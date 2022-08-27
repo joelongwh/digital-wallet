@@ -1,0 +1,69 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {
+	font-family: "Raleway", sans-serif;
+	color: white;
+}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+label {
+	font-size: 20px;
+}
+
+input {
+	width: 15%;
+	padding: 10px 16px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border-radius: 4px;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://images.unsplash.com/photo-1599050751795-6cdaafbc2319?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3028&q=80");
+  min-height: 100%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+</style>
+
+<div class="w3-container bgimg-1" style="padding:128px 16px" >
+
+	<h3 class="w3-center">Create account</h3>
+	
+	<p class="w3-center">Please enter a username and password:</p>
+	
+	<form class="w3-center w3-large" method="post" th:action="@{/user/newuser}">
+		<div>
+			<label for="username">Username </label>
+			<input required type="text" name="username" />
+		</div>
+		<div>
+			<label for="password">Password </label>
+			<input required type="password" name="password" />
+		</div>
+		<div>
+			<label for="confirmPassword">Confirm Password </label>
+			<input required type="password" name="confirmPassword" />
+		</div>
+		<div>
+			<input type = "submit" value="Create"/>
+		</div>
+	</form>
+	
+	<div class="w3-center w3-large">
+		<button onClick="window.location.href='login'">Login</button>
+	</div>
+
+</div>

@@ -1,0 +1,9 @@
+<div th:insert="utility :: Header"></div>
+
+<div class="w3-container bgimg-1" style="padding:128px 16px" >
+	<h3 class="w3-center white" >Hello, welcome to your digital wallet.</h3>
+	
+	<div class="w3-center w3-large white" th:object="${session.wallet}" >
+		<p th:text=" 'Balance: $' + *{walletBalance} " >Wallet Balance</p>
+	</div>
+</div>

@@ -1,0 +1,18 @@
+<div th:insert="utility :: Header"></div>
+
+<div class="w3-container" style="padding:128px 16px" >
+	<h3 class="w3-center" >Transaction History</h3>
+	
+	<table >
+		<tr>
+			<th>Date</th>
+			<th>Amount</th>
+			<th>Description</th>
+		</tr>
+		<tr th:each="transaction : ${transactions}" th:object="${transaction}">
+			<td th:text="*{transactionDate}">Date</td>
+			<td th:text="*{transactionAmount}">Amount</td>
+			<td th:text="*{description}">Description</td>
+		</tr>
+	</table>
+</div>

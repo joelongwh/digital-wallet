@@ -1,0 +1,21 @@
+<div th:insert="utility :: Header"></div>
+
+<div class="w3-container" style="padding:128px 16px" >
+	<h3 class="w3-center" >Edit Profile</h3>
+	
+	<p class="w3-center" >Please enter new username and password:</p>
+	
+	<form class="w3-center w3-large" th:object="${user}" method="post" th:action="@{/user/edituser/save}">
+		<input hidden th:field="*{id}" />
+		<div>
+			<label for="username">Username </label>
+			<input required type="text" th:field="*{username}" />
+		</div>
+		<div>
+			<label for="password">Password </label>
+			<input required type="password" th:field="*{password}" />
+		</div>
+		<input hidden th:field="*{wallet}" />
+		<input type="submit" value="Submit" />
+	</form>
+</div>
