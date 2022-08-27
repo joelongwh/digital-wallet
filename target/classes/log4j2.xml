@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn" monitorInterval="30">
+	<Appenders>
+		<Console name="StdOut" target="SYSTEM_OUT">
+			<PatternLayout pattern="%msg%n" />
+		</Console>
+		<File name="LogFileAppender" filename="DigitalWalletLog.log">
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</File>
+	</Appenders>
+	<Loggers>
+		# Set level
+		<Root level="debug">
+			<AppenderRef ref="StdOut" level="debug"/>
+		</Root>
+		<Logger name="com.fdmgroup.DigitalWalletJoel.Controller" level="debug">
+			<AppenderRef ref="LogFileAppender" />
+		</Logger>
+	</Loggers>
+</Configuration>
